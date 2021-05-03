@@ -103,7 +103,6 @@ libraryDependencies ++= Seq(
 /**************************************
 	* Remove Shaded Depenedency from POM
 	*/
-
 import scala.xml.{Node => XmlNode, NodeSeq => XmlNodeSeq, _}
 import scala.xml.transform.{RewriteRule, RuleTransformer}
 
@@ -206,11 +205,12 @@ releaseProcess := Seq[ReleaseStep](
 /**
 	* Antlr settings
 	*/
-antlr4Settings
+//enablePlugins(Antlr4Plugin)
 antlr4PackageName in Antlr4 := Some("com.qubole.spark.datasources.hiveacid.sql.catalyst.parser")
 antlr4GenListener in Antlr4 := true
 antlr4GenVisitor in Antlr4 := true
 antlr4Version := "4.7.2"
+antlr4Settings
 
 
 /*******************
