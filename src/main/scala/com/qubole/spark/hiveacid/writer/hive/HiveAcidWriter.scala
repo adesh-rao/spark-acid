@@ -308,7 +308,6 @@ private[writer] class HiveAcidFullAcidWriter(options: WriterOptions,
         throw new RuntimeException(s"Invalid write operation $x")
     }
   }
-
   def close(): Unit = {
     writers.foreach( x => try {
       // TODO: Seems the boolean value passed into close does not matter.
